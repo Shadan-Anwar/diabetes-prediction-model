@@ -34,9 +34,17 @@
 import joblib
 import streamlit as st
 import numpy as np
+import os
+
+# Path to model from src/app.py
+# MODEL_PATH = os.path.join(os.path.dirname(
+#     __file__), "..", "model", "logistic_model.joblib")
+
+# Load model safely
+# model = joblib.load(MODEL_PATH)
 
 # Load the model (use joblib, not pickle)
-model = joblib.load("../model/logistic_model.joblib")
+model = joblib.load("model/logistic_model.joblib")
 
 st.title("Diabetes Prediction App")
 st.header(
