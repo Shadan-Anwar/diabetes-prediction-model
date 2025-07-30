@@ -6,6 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import joblib
+import os
 
 # Load your dataset
 # df = pd.read_csv("data/diabetes.csv")
@@ -28,7 +29,15 @@ model.fit(X_train, y_train)
 
 # Save the model locally
 # joblib.dump(model, "logistic_model.joblib")
-joblib.dump(model, "../model/logistic_model.joblib")
+# joblib.dump(model, "../model/logistic_model.joblib")
+
+
+os.makedirs("model", exist_ok=True)
+joblib.dump(model, "model/logistic_model.joblib")
+
+
+# joblib.dump(
+#     model, "/home/shaddy/Desktop/AI/Projects/diabetes_prediction_project/model")
 
 print("Model saved as logistic_model.joblib")
 
