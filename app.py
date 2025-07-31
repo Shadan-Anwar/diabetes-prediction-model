@@ -44,7 +44,7 @@ import os
 # model = joblib.load(MODEL_PATH)
 
 # Load the model (use joblib, not pickle)
-model = joblib.load("model/logistic_model.joblib")
+model = joblib.load("logistic_model.joblib")
 
 st.title("Diabetes Prediction App")
 st.header(

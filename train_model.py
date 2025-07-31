@@ -12,7 +12,7 @@ import os
 # df = pd.read_csv("data/diabetes.csv")
 # df = pd.read_csv("/home/shaddy/Desktop/AI/Projects/diabetes_prediction_project/data")
 df = pd.read_csv(
-    "/home/shaddy/Desktop/AI/Projects/diabetes_prediction_project/data/diabetes.csv")
+    "/home/shaddy/Desktop/AI/Projects/diabetes_prediction_project/diabetes.csv")
 
 
 # Define X and y
@@ -32,8 +32,8 @@ model.fit(X_train, y_train)
 # joblib.dump(model, "../model/logistic_model.joblib")
 
 
-os.makedirs("model", exist_ok=True)
-joblib.dump(model, "model/logistic_model.joblib")
+# os.makedirs("model", exist_ok=True)
+joblib.dump(model, "logistic_model.joblib")
 
 
 # joblib.dump(
